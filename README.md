@@ -2,8 +2,8 @@
 >
 > ⚠️ **NOTE:** UniFi API for updates like PUT is blocking clients with a 403 error if attempted remotely. The API scripts work only when POST/PUT are executed against UniFi localhost on port 443.
 >
-> ## 🔀 Port Forwarding Rule Enable/Disable Control
->
+ ## 🔀 Port Forwarding Rule Enable/Disable Control
+
  **🎯 Use Case:** Temporary access through the firewall to a specific host, such as Nginx-proxy-manager for Let's Encrypt DNS challenge passing. We can use a script like `unifi-control-port-forwarding-rules.py`. Being a script, we can automate the rule enable/disable at desired intervals. Since the UniFi host does not have crontab, we should execute the script locally on the UniFi host but with a remote execution trigger. The UniFi controller must have SSH enabled and set up.
 
  **📋 Example command:** This command can fully automate the control of port forwarding rules from any remote machine that has crontab while the API Python script is still executed locally on the UniFi controller:
